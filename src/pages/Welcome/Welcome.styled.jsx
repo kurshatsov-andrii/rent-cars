@@ -3,10 +3,10 @@ import theme from '../../styles/theme'
 
 export const WrapperWelcome = styled.div`
 	margin: 0 auto;
-	max-width: 1600px;
+	max-width: 100%;
 	height: 400px;
 	padding: 100px 0px;
-	background-image: url(/rent-cars/src/assets/auto-cover.jpg);
+	background-image: url(https://seoinar.com.ua/wp-content/uploads/2024/02/blue-car-scaled.jpg);
 	background-position: top center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -22,6 +22,7 @@ export const Title = styled.h1`
 	font-size: 44px;
 	color: ${theme.colors.white};
 	text-align: center;
+	text-shadow: 1px 1px 0px #000000, -1px -1px 0px #ffffff;
 `
 
 export const ButtonGo = styled.button`
@@ -32,9 +33,11 @@ export const ButtonGo = styled.button`
 	padding: 12px 52px;
 	border-radius: 12px;
 	background-color: ${theme.colors.accent};
+	border-color: ${theme.colors.white};
 	color: ${theme.colors.white};
 	font-size: 14px;
 	font-weight: 600;
+	cursor: pointer;
 	line-height: 142.857%;
 	box-shadow: ${theme.shadows.small};
 	transition-property: transform, box-shadow, background-color;

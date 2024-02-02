@@ -1,4 +1,5 @@
 import { Container } from '../Container/Container.styled'
+import { UserNav } from '../UserNav/UserNav'
 import {
 	ButtonMenu,
 	HeaderStyled,
@@ -14,7 +15,9 @@ const Header = () => {
 			<HeaderStyled>
 				<WrapperLogo to='/'>RENT CARS</WrapperLogo>
 				<Wrapper>
-					<WrapperDes></WrapperDes>
+					<WrapperDes>
+						<UserNav />
+					</WrapperDes>
 					<ButtonMenu>
 						<IconMenu />
 					</ButtonMenu>

@@ -56,6 +56,6 @@ export const WrapperLogo = styled(Link)`
 	font-size: 24px;
 	font-weight: 800;
 	&:hover {
-		text-decoration: underline;
+		transform: scale(1.02);
 	}
 `

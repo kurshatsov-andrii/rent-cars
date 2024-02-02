@@ -1,5 +1,5 @@
 import { css } from '@emotion/react'
-import { theme } from 'styles/theme'
+import { theme } from '../styles/theme'
 
 export const GlobalStyles = css`
 	html {
@@ -35,7 +35,6 @@ export const GlobalStyles = css`
 
 	button {
 		padding: 0;
-		border: none;
 		font: inherit;
 		color: inherit;
 		background-color: transparent;
