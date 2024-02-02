@@ -125,7 +125,7 @@ Error generating stack: `+o.message+`
 	&:hover {
 		text-decoration: underline;
 	}
-`,Rv=()=>J.jsx(pv,{children:J.jsxs(xv,{children:[J.jsx(Nv,{to:"/",children:"RENT CARS"}),J.jsxs(Cv,{children:[J.jsx(_v,{}),J.jsx(Tv,{children:J.jsx(Pv,{})})]})]})}),Lv=()=>J.jsxs(J.Fragment,{children:[J.jsx(Rv,{}),J.jsx(Qm,{}),J.jsx(v0,{autoClose:2500})]}),Is=E.lazy(()=>bh(()=>import("./Welcome-ZQmjJRYG.js"),__vite__mapDeps([]))),Ov=()=>J.jsx(Ym,{children:J.jsxs(kl,{path:"/",element:J.jsx(Lv,{}),children:[J.jsx(kl,{index:!0,element:J.jsx(Is,{})}),J.jsx(kl,{path:"*",element:J.jsx(Is,{})})]})});ni.createRoot(document.getElementById("root")).render(J.jsx(e0,{basename:"/rent-cars",children:J.jsx(Ov,{})}));export{pv as C,Sv as G,J as j,wt as n,Ed as t,Nm as u};
+`,Rv=()=>J.jsx(pv,{children:J.jsxs(xv,{children:[J.jsx(Nv,{to:"/",children:"RENT CARS"}),J.jsxs(Cv,{children:[J.jsx(_v,{}),J.jsx(Tv,{children:J.jsx(Pv,{})})]})]})}),Lv=()=>J.jsxs(J.Fragment,{children:[J.jsx(Rv,{}),J.jsx(Qm,{}),J.jsx(v0,{autoClose:2500})]}),Is=E.lazy(()=>bh(()=>import("./Welcome-lRcr44Gy.js"),__vite__mapDeps([]))),Ov=()=>J.jsx(Ym,{children:J.jsxs(kl,{path:"/",element:J.jsx(Lv,{}),children:[J.jsx(kl,{index:!0,element:J.jsx(Is,{})}),J.jsx(kl,{path:"*",element:J.jsx(Is,{})})]})});ni.createRoot(document.getElementById("root")).render(J.jsx(e0,{basename:"/rent-cars",children:J.jsx(Ov,{})}));export{pv as C,Sv as G,J as j,wt as n,Ed as t,Nm as u};
 function __vite__mapDeps(indexes) {
   if (!__vite__mapDeps.viteFileDeps) {
     __vite__mapDeps.viteFileDeps = []
