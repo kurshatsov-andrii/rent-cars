@@ -6,7 +6,7 @@ export const WrapperWelcome = styled.div`
 	max-width: 1600px;
 	height: 400px;
 	padding: 100px 0px;
-	background-image: url(/rent-cars/src/images/auto-cover.jpg);
+	background-image: url(/rent-cars/src/assets/auto-cover.jpg);
 	background-position: top center;
 	background-repeat: no-repeat;
 	background-size: cover;
