@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import { FaUserTie } from 'react-icons/fa'
 import { FaCheckCircle } from 'react-icons/fa'
 import { FaCar } from 'react-icons/fa'
@@ -13,11 +14,17 @@ import {
 } from './Welcome.styled'
 
 export default function Welcome() {
+	const navigate = useNavigate()
+
+	const handleGo = () => {
+		navigate('/catalog')
+	}
+
 	return (
 		<>
 			<WrapperWelcome>
-				<Title>Rent a Car, Rewrite Your Travel Story</Title>
-				<ButtonGo>GO</ButtonGo>
+				<Title>Rent a Car, Rewrite Your Travel Story!</Title>
+				<ButtonGo onClick={handleGo}>Go</ButtonGo>
 			</WrapperWelcome>
 			<Container>
 				<WrapperFlex>
