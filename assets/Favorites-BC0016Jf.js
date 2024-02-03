@@ -1,0 +1,1 @@
+import{j as r,C as t}from"./index-a16z9sf0.js";import{E as o}from"./Favorites.styled--hqeNjkJ.js";function i(){return r.jsx(t,{children:r.jsx(o,{children:"Your favorites is empty."})})}export{i as default};

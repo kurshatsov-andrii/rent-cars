@@ -1,4 +1,4 @@
-import{n,t as o,j as t,C as r}from"./index-xN5WROkH.js";import{E as e}from"./Favorites.styled--LsfEmn-.js";const i=n.button`
+import{n,t as o,j as t,C as r}from"./index-a16z9sf0.js";import{E as e}from"./Favorites.styled--hqeNjkJ.js";const i=n.button`
 	margin-top: 40px;
 	display: flex;
 	margin-left: auto;
