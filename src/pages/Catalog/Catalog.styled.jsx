@@ -1,24 +1,21 @@
-import styled from '@emotion/styled'
-import theme from '../../styles/theme'
+import styled from 'styled-components'
 
-export const ButtonLoadMore = styled.button`
-	margin-top: 40px;
+export const BtnMore = styled.button`
+	background-color: transparent;
+	border: transparent;
+	margin: 0 auto;
 	display: flex;
-	margin-left: auto;
-	margin-right: auto;
-	color: ${theme.colors.accent};
+	color: ${({ theme: { colors } }) => colors.accentLight};
+	text-decoration: underline;
 	font-size: 16px;
 	font-weight: 500;
-	line-height: 150%;
-	text-decoration-line: underline;
-	transition-property: transform, color;
-	transition-duration: 0.25s;
-	transition-timing-function: ${theme.animation.cubicBezier};
+	line-height: 1.5;
+	transition: color 300ms
+			${({ theme: { transition } }) => transition.timingFunction},
+		scale 300ms ${({ theme: { transition } }) => transition.timingFunction};
+
 	&:hover {
-		transform: scale(1.02);
-		color: #0b44cd;
-	}
-	@media (min-width: 1440px) {
-		margin-top: 79px;
+		color: ${({ theme: { colors } }) => colors.accentDark};
+		scale: 1.2;
 	}
 `

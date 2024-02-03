@@ -18,7 +18,8 @@ export const LinkNav = styled(NavLink)`
 	border: 1px solid rgba(239, 237, 232, 0.2);
 	font-size: 14px;
 	line-height: 128.571%;
-	background-color: ${theme.colors.accent};
+	background-color: ${theme.colors.white};
+	font-weight: 600;
 	&:not(:last-child) {
 		margin-bottom: 16px;
 	}
@@ -29,7 +30,11 @@ export const LinkNav = styled(NavLink)`
 	&:hover {
 		transform: scale(1.02);
 		box-shadow: ${theme.shadows.medium};
-		background-color: #0b44cd;
+		background-color: #3470ff;
+		color: ${theme.colors.white};
+		box-shadow: 5px 5px 7px -1px rgba(51, 51, 51, 0.23);
+		transition-property: transform, box-shadow, background-color;
+		transition-duration: 0.25s;
 	}
 
 	@media (min-width: 768px) {

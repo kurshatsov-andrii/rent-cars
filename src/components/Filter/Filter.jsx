@@ -1,110 +1,193 @@
-import Select from 'react-select'
-import makes from '../../bd/makes.json'
+import { useState } from 'react'
+import { modelData, priceData } from '../../components/constants/dataConstants'
 import {
+	ButtonFilter,
+	DropDown,
+	DropdownItem,
+	DropdownList,
+	DropDownPrice,
 	FormFilter,
-	InputMile,
-	LabelMakes,
-	SearchButton,
-	WrapperFlex,
-	WrapperFrom,
-	WrapperMakes,
-	WrapperPrice,
-	WrapperTo,
+	InputFrom,
+	InputTo,
+	InputWrap,
+	LabelFilter,
+	LabelMileage,
+	Select,
+	SelectPrice,
 } from './Filter.styled'
-import { customStyles } from './FilterCustomStyles.styled'
+import iconDown from '../../images/iconDown.svg'
+import iconUp from '../../images/iconUp.svg'
 import { useDispatch } from 'react-redux'
-import { getFilter, resetFilter } from 'redux/filterSlice'
-import { useRef, useState } from 'react'
+
+import { setValueFilter } from '../../redux/filter/filterSlice'
+import { useCars } from '../../hooks/useCars'
 
 export const Filter = () => {
+	const { brandFilter, priceFilter } = useCars()
+	const [selectedBrand, setSelectedBrand] = useState(
+		brandFilter ? brandFilter : 'Enter the text'
+	)
+	const [isShownSelectBrand, setShownSelectBrand] = useState(false)
+	const [isShownSelectPrice, setShownSelectPrice] = useState(false)
+	const [selectedPrice, setSelectedPrice] = useState(
+		priceFilter ? priceFilter : 'To $'
+	)
+	const [selectedFromMileage, setSelectedFromMileage] = useState('')
+	const [selectedToMileage, setSelectedToMileage] = useState('')
 	const dispatch = useDispatch()
-	const makeRef = useRef(null)
-	const priceRef = useRef(null)
-	const fromRef = useRef(null)
-	const toRef = useRef(null)
-	const [showBtnReset, setShowBtnReset] = useState(false)
 
-	const makesOptions = makes.map(item => ({
-		value: item,
-		label: item.charAt(0).toUpperCase() + item.slice(1),
-	}))
-
-	const priceOptions = Array.from({ length: 50 }, (_, index) => ({
-		value: String((index + 2) * 10),
-		label: String((index + 2) * 10),
-	}))
-
-	const handleSubmit = e => {
+	const handleShownSelectedBrand = e => {
 		e.preventDefault()
-		const form = e.target
-		const make = form.elements.make.value
-		const price = form.elements.price.value
-		const from = form.elements.from.value
-		const to = form.elements.to.value
-		dispatch(getFilter({ make, price, from, to }))
-		setShowBtnReset(true)
+		setShownSelectBrand(prev => !prev)
 	}
 
-	const handleReset = () => {
-		makeRef.current.clearValue()
-		priceRef.current.clearValue()
-		fromRef.current.value = ''
-		toRef.current.value = ''
-		dispatch(resetFilter())
-		setShowBtnReset(false)
+	const handleShownSelectedPrice = e => {
+		e.preventDefault()
+		setShownSelectPrice(prev => !prev)
+	}
+	const changeBrand = brand => {
+		setSelectedBrand(brand)
+		setShownSelectBrand(false)
+	}
+	const changePrice = price => {
+		setSelectedPrice(price + ' $')
+		setShownSelectPrice(false)
+	}
+
+	const handleInputChangeFrom = e => {
+		const { value } = e.target
+		setSelectedFromMileage(value.replace(/,/g, ''))
+	}
+
+	const handleInputChangeTo = e => {
+		const { value } = e.target
+		setSelectedToMileage(value.replace(/,/g, ''))
+	}
+
+	const handleFilterSubmit = e => {
+		e.preventDefault()
+		if (
+			selectedBrand === 'Enter the text' &&
+			selectedPrice === 'To $' &&
+			!selectedFromMileage &&
+			!selectedToMileage
+		) {
+			return
+		}
+		const data = {
+			brand: selectedBrand === 'Enter the text' ? '' : selectedBrand,
+			price: selectedPrice === 'To $' ? '' : `$${parseInt(selectedPrice, 10)}`,
+			mileageFrom: selectedFromMileage.trim(),
+			mileageTo: selectedToMileage.trim(),
+			onFilter: true,
+		}
+		dispatch(setValueFilter(data))
+	}
+
+	const handleFilterClear = e => {
+		e.preventDefault()
+		const data = {
+			brand: '',
+			price: '',
+			mileageFrom: '',
+			mileageTo: '',
+			onFilter: false,
+		}
+
+		dispatch(setValueFilter(data))
+		setSelectedBrand('Enter the text')
+		setSelectedPrice('To $')
+		setSelectedFromMileage('')
+		setSelectedToMileage('')
 	}
 
 	return (
-		<FormFilter onSubmit={handleSubmit}>
+		<FormFilter>
 			<div>
-				<LabelMakes>
-					Car brand
-					<WrapperMakes>
-						<Select
-							name={'make'}
-							options={makesOptions}
-							styles={customStyles}
-							isSearchable={false}
-							ref={makeRef}
-							placeholder='Enter the text'
+				<LabelFilter>Car brand</LabelFilter>
+				<div style={{ position: 'relative' }}>
+					<Select onClick={handleShownSelectedBrand}>
+						{selectedBrand}
+						{isShownSelectBrand ? (
+							<svg>
+								<use href={iconUp + '#up'}></use>
+							</svg>
+						) : (
+							<svg>
+								<use href={iconDown + '#down'}></use>
+							</svg>
+						)}
+					</Select>
+					{isShownSelectBrand && (
+						<DropDown>
+							<DropdownList>
+								{modelData.map(el => (
+									<DropdownItem key={el} onClick={() => changeBrand(el)}>
+										{el}
+									</DropdownItem>
+								))}
+							</DropdownList>
+						</DropDown>
+					)}
+				</div>
+			</div>
+			<div>
+				<LabelFilter>Price/ 1 hour</LabelFilter>
+				<div style={{ position: 'relative' }}>
+					<SelectPrice onClick={handleShownSelectedPrice}>
+						{selectedPrice}
+						{isShownSelectPrice ? (
+							<svg>
+								<use href={iconUp + '#up'}></use>
+							</svg>
+						) : (
+							<svg>
+								<use href={iconDown + '#down'}></use>
+							</svg>
+						)}
+					</SelectPrice>
+					{isShownSelectPrice && (
+						<DropDownPrice>
+							<DropdownList>
+								{priceData.map(el => (
+									<DropdownItem key={el} onClick={() => changePrice(el)}>
+										{el}
+									</DropdownItem>
+								))}
+							</DropdownList>
+						</DropDownPrice>
+					)}
+				</div>
+			</div>
+			<div>
+				<LabelFilter>Сar mileage / km</LabelFilter>
+				<div style={{ display: 'flex' }}>
+					<InputWrap>
+						<InputFrom
+							type='text'
+							mask='9,999'
+							title='Only number'
+							onChange={handleInputChangeFrom}
+							value={selectedFromMileage}
+							id='mileageFrom'
 						/>
-					</WrapperMakes>
-				</LabelMakes>
-			</div>
-			<div>
-				<LabelMakes>
-					Price/ 1 hour
-					<WrapperPrice>
-						<Select
-							name={'price'}
-							options={priceOptions}
-							styles={customStyles}
-							isSearchable={false}
-							ref={priceRef}
-							placeholder='To $'
+						<LabelMileage htmlFor='mileageFrom'>From</LabelMileage>
+					</InputWrap>
+					<InputWrap>
+						<InputTo
+							type='text'
+							mask='9,999'
+							title='Only number'
+							onChange={handleInputChangeTo}
+							value={selectedToMileage}
+							id='mileageTo'
 						/>
-					</WrapperPrice>
-				</LabelMakes>
+						<LabelMileage htmlFor='mileageTo'>To</LabelMileage>
+					</InputWrap>
+				</div>
 			</div>
-			<div>
-				<LabelMakes>
-					Сar mileage / km
-					<WrapperFlex>
-						<WrapperFrom>
-							From <InputMile type='number' name='from' ref={fromRef} />
-						</WrapperFrom>
-						<WrapperTo>
-							To <InputMile type='number' name='to' ref={toRef} />
-						</WrapperTo>
-					</WrapperFlex>
-				</LabelMakes>
-			</div>
-			<SearchButton>Search</SearchButton>
-			{showBtnReset && (
-				<SearchButton type='button' onClick={handleReset}>
-					Reset
-				</SearchButton>
-			)}
+			<ButtonFilter onClick={handleFilterSubmit}>Search</ButtonFilter>
+			<ButtonFilter onClick={handleFilterClear}>Reset</ButtonFilter>
 		</FormFilter>
 	)
 }

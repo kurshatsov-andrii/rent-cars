@@ -48,7 +48,5 @@ export const GlobalStyles = css`
 
 	img {
 		display: block;
-		max-width: 100%;
-		height: auto;
 	}
 `

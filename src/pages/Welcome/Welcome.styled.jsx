@@ -1,12 +1,13 @@
 import styled from '@emotion/styled'
 import theme from '../../styles/theme'
+import image from '../../images/blue-car.jpg'
 
 export const WrapperWelcome = styled.div`
 	margin: 0 auto;
 	max-width: 100%;
 	height: 400px;
 	padding: 100px 0px;
-	background-image: url(https://seoinar.com.ua/wp-content/uploads/2024/02/blue-car-scaled.jpg);
+	background-image: url(${image});
 	background-position: top center;
 	background-repeat: no-repeat;
 	background-size: cover;

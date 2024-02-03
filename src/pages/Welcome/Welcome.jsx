@@ -23,8 +23,8 @@ export default function Welcome() {
 	return (
 		<>
 			<WrapperWelcome>
-				<Title>Rent a Car, Rewrite Your Travel Story!</Title>
-				<ButtonGo onClick={handleGo}>Go</ButtonGo>
+				<Title>Rent a Car, Rewrite Your Travel Story</Title>
+				<ButtonGo onClick={handleGo}>GO</ButtonGo>
 			</WrapperWelcome>
 			<Container>
 				<WrapperFlex>
