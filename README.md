@@ -8,29 +8,29 @@ The application consists of three main pages:
 
 1. Home Page: Provides a general overview of the services offered by the company.
 
-![Home Page](./assets/home-page.jpg)
+![Home Page](./public/home-page.jpg)
 
 2. Catalog Page: Displays a catalog of cars with different specifications that users can filter by brand, hourly rental price, and mileage.
 
-![Catalog Page](./assets/catalog-page.jpg)
+![Catalog Page](./public/catalog-page.jpg)
 
 3. Favorites Page: Shows advertisements added by the user to their favorites list.
 
-![Favorites Page](./assets/favorites-page.jpg)
+![Favorites Page](./public/favorites-page.jpg)
 
 ## Features
 
 - Viewing and filtering car advertisements by brand, hourly rental price, and mileage.
 
-![Filtering](./assets/filter-page.jpg)
+![Filtering](./public/filter-page.jpg)
 
 - Adding and removing advertisements from the favorites list.
 
-![Adding and Removing from Favorites](./assets/heart-page.jpg)
+![Adding and Removing from Favorites](./public/heart-page.jpg)
 
 - Viewing detailed information about a car and its rental conditions in a modal window.
 
-![Modal Window](./assets/modal-page.jpg)
+![Modal Window](./public/modal-page.jpg)
 
 - Contacting the car rental company via the "Rent a Car" button with a link to the phone number +380730000000.
 
@@ -54,7 +54,7 @@ The application consists of three main pages:
 
 - The application includes error handling pages and an empty result page to effectively display various error scenarios and cases where nothing is found based on the applied filters. Users will be informed and directed in cases of errors and empty results.
 
-![Empty Result](./assets/error-page.jpg)
+![Empty Result](./public/error-page.jpg)
 
 ## Non-Existent Route
 
