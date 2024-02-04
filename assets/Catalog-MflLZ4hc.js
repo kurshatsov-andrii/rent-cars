@@ -1,4 +1,4 @@
-import{j as e,a as E,b as L,c as b,r as a,d as w,g as B,e as k,f as y,L as M,E as S}from"./index-82BMCHC5.js";import{C as $,a as D,g as v,F as A}from"./getFilteredCars-xZgkCqi0.js";const P=({data:t})=>e.jsx(e.Fragment,{children:e.jsx($,{children:t.map(s=>e.jsx(D,{dataCar:s},s.id))})}),z=E.button`
+import{j as e,a as E,b as L,c as b,r as a,d as w,g as B,e as k,f as y,L as M,E as S}from"./index-TJBKe1vu.js";import{C as $,a as D,g as v,F as A}from"./getFilteredCars-wex-hirn.js";const P=({data:t})=>e.jsx(e.Fragment,{children:e.jsx($,{children:t.map(s=>e.jsx(D,{dataCar:s},s.id))})}),z=E.button`
 	background-color: transparent;
 	border: transparent;
 	margin: 0 auto;
