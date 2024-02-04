@@ -15,8 +15,8 @@ import {
 	Select,
 	SelectPrice,
 } from './Filter.styled'
-import iconDown from '../../images/iconDown.svg'
-import iconUp from '../../images/iconUp.svg'
+import iconDown from '../../../public/iconDown.svg'
+import iconUp from '../../../public/iconUp.svg'
 import { useDispatch } from 'react-redux'
 
 import { setValueFilter } from '../../redux/filter/filterSlice'
