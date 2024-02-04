@@ -91,12 +91,14 @@ export const CarItem = ({ dataCar }) => {
 						{favorite.some(car => car.id === dataCar.id) ? (
 							<svg>
 								{/* <use href={iconFill + '#heart-fill'}></use> */}
-								<use href={`${iconFill}#heart-fill`} />
+								{/* <use href={`${iconFill}#heart-fill`} /> */}
+								<use xlinkHref={`${iconFill}#heart-fill`} />
 							</svg>
 						) : (
 							<svg>
 								{/* <use href={icon + '#heart'}></use> */}
-								<use href={`${icon}#heart`} />
+								{/* <use href={`${icon}#heart`} /> */}
+								<use xlinkHref={`${icon}#heart`} />
 							</svg>
 						)}
 					</FavoriteBtn>
