@@ -22,8 +22,8 @@ import {
 	TitleWrap,
 } from './CarItem.styled'
 
-import icon from '../../../public/heart.svg'
-import iconFill from '../../../public/heartFill.svg'
+import icon from '/heart.svg'
+import iconFill from '/heartFill.svg'
 import { useCars } from '../../hooks/useCars'
 import { useDispatch } from 'react-redux'
 import {
@@ -91,14 +91,10 @@ export const CarItem = ({ dataCar }) => {
 						{favorite.some(car => car.id === dataCar.id) ? (
 							<svg>
 								<use href={iconFill + '#heart-fill'}></use>
-								{/* <use href={`${iconFill}#heart-fill`} /> */}
-								{/* <use xlinkHref={`${iconFill}#heart-fill`} /> */}
 							</svg>
 						) : (
 							<svg>
 								<use href={icon + '#heart'}></use>
-								{/* <use href={`${icon}#heart`} /> */}
-								{/* <use xlinkHref={`${icon}#heart`} /> */}
 							</svg>
 						)}
 					</FavoriteBtn>
@@ -182,7 +178,7 @@ export const CarItem = ({ dataCar }) => {
 							</ConditionsItem>
 						</ConditionsList>
 					</ModalScrollWrap>
-					<RentalPhone href='tel:+380730000000'>Rental car</RentalPhone>
+					<RentalPhone href='tel:+380730000000'>Rent cars</RentalPhone>
 				</Modal>
 			)}
 		</>

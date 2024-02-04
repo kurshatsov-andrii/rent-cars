@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { Overlay, Wrapper, IconClose, ButtonClose } from './MobileMenu.styled'
 import { UserNav } from '../UserNav/UserNav'
 
-export const MobilMenu = ({ onClose }) => {
+export const MobileMenu = ({ onClose }) => {
 	useEffect(() => {
 		const handleClick = e => {
 			if (e.code === 'Escape') {

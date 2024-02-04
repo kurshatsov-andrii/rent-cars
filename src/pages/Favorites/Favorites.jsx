@@ -5,7 +5,8 @@ import { Error } from '../../components/Error/Error'
 import { Filter } from '../../components/Filter/Filter'
 import { getFilteredCars } from '../../components/helpers/getFilteredCars'
 import { useCars } from '../../hooks/useCars'
-import { FavoriteWrap } from './Favorites.styled'
+import { Section } from '../../components/Section/Section.styled'
+import { ContainerMain } from '../../components/SharedLayout/SharedLayout.styled'
 
 const Favorites = () => {
 	const { favorite, brandFilter, priceFilter, mileageFrom, mileageTo } =
@@ -20,24 +21,28 @@ const Favorites = () => {
 	)
 
 	return (
-		<FavoriteWrap>
+		<ContainerMain>
 			<div>
 				{favorite.length === 0 ? (
 					<EmptyFavorite />
 				) : (
 					<>
 						<Filter />
-						<CartListStyle>
-							{filteredCars.length === 0 ? (
-								<Error emptyFilter={true} />
-							) : (
-								filteredCars.map(car => <CarItem dataCar={car} key={car.id} />)
-							)}
-						</CartListStyle>
+						<Section>
+							<CartListStyle>
+								{filteredCars.length === 0 ? (
+									<Error emptyFilter={true} />
+								) : (
+									filteredCars.map(car => (
+										<CarItem dataCar={car} key={car.id} />
+									))
+								)}
+							</CartListStyle>
+						</Section>
 					</>
 				)}
 			</div>
-		</FavoriteWrap>
+		</ContainerMain>
 	)
 }
 

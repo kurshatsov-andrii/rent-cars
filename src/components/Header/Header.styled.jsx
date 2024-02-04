@@ -1,13 +1,15 @@
-import styled from '@emotion/styled'
+// import styled from '@emotion/styled'
 import { Link } from 'react-router-dom'
 import { HiMenuAlt1 } from 'react-icons/hi'
-import theme from '../../styles/theme'
+// import theme from '../../styles/theme'
+import styled from 'styled-components'
 
 export const HeaderStyled = styled.header`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 12px 0;
+	border-bottom: 1px solid rgba(239, 237, 232, 0.2);
 	@media (min-width: 768px) {
 		padding: 19px 0;
 	}
@@ -29,7 +31,8 @@ export const WrapperDes = styled.div`
 export const IconMenu = styled(HiMenuAlt1)`
 	width: 24px;
 	height: 24px;
-	color: ${theme.colors.accent};
+	${'' /* color: ${theme.colors.accent}; */}
+	color: ${({ theme: { colors } }) => colors.accentLight};
 	@media (min-width: 768px) {
 		width: 32px;
 		height: 32px;
@@ -50,12 +53,13 @@ export const ButtonMenu = styled.button`
 `
 
 export const WrapperLogo = styled(Link)`
-	text-decoration: none;
 	cursor: pointer;
-	color: ${theme.colors.accent};
+	${'' /* color: ${theme.colors.accent}; */}
+	color: ${({ theme: { colors } }) => colors.accentLight};
 	font-size: 24px;
 	font-weight: 800;
 	&:hover {
 		transform: scale(1.02);
+		border-radius: 12px;
 	}
 `

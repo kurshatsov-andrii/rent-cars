@@ -1,5 +1,4 @@
-import styled from '@emotion/styled'
-import theme from '../../styles/theme'
+import styled from 'styled-components'
 import image from '../../images/blue-car.jpg'
 
 export const WrapperWelcome = styled.div`
@@ -21,7 +20,7 @@ export const Title = styled.h1`
 	font-weight: 900;
 	text-transform: uppercase;
 	font-size: 44px;
-	color: ${theme.colors.white};
+	color: ${({ theme: { colors } }) => colors.white};
 	text-align: center;
 	text-shadow: 1px 1px 0px #000000, -1px -1px 0px #ffffff;
 `
@@ -33,20 +32,21 @@ export const ButtonGo = styled.button`
 	margin-top: 28px;
 	padding: 12px 52px;
 	border-radius: 12px;
-	background-color: ${theme.colors.accent};
-	border-color: ${theme.colors.white};
-	color: ${theme.colors.white};
+	background-color: ${({ theme: { colors } }) => colors.accentLight};
+	border-color: ${({ theme: { colors } }) => colors.white};
+	color: ${({ theme: { colors } }) => colors.white};
 	font-size: 14px;
 	font-weight: 600;
 	cursor: pointer;
 	line-height: 142.857%;
-	box-shadow: ${theme.shadows.small};
+	box-shadow: ${({ theme: { shadows } }) => shadows.small};
 	transition-property: transform, box-shadow, background-color;
 	transition-duration: 0.25s;
-	transition-timing-function: ${theme.animation.cubicBezier};
+	transition-timing-function: ${({ theme: { animation } }) =>
+		animation.cubicBezier};
 	&:hover {
 		transform: scale(1.02);
-		box-shadow: ${theme.shadows.medium};
+		box-shadow: ${({ theme: { shadows } }) => shadows.medium};
 		background-color: #0b44cd;
 	}
 `
@@ -59,7 +59,7 @@ export const Wrapper = styled.div`
 		margin-right: auto;
 		width: 40px;
 		height: 40px;
-		fill: ${theme.colors.accent};
+		fill: ${({ theme: { colors } }) => colors.accentLight};
 	}
 `
 

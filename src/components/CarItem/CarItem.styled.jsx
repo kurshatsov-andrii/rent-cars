@@ -119,6 +119,7 @@ export const BtnLearnMore = styled.button`
 	line-height: 1.43;
 	border-radius: 12px;
 	border: transparent;
+	margin-top: 20px;
 	background-color: ${({ theme: { colors } }) => colors.accentLight};
 	color: ${({ theme: { colors } }) => colors.white};
 	transition: background-color 300ms

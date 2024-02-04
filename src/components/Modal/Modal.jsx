@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import { Backdrop, BtnClose, ModalContent } from './Modal.styled'
-import iconClose from '../../../public/close.svg'
+import iconClose from '/close.svg'
 
 const modalRoot = document.querySelector('#modal-root')
 

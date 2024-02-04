@@ -17,7 +17,6 @@ export const modelData = [
 	'Audi',
 	'BMW',
 	'Chevrolet',
-	'Mercedes-Benz',
 	'Chrysler',
 	'Kia',
 	'Land',

@@ -14,6 +14,7 @@ import { Loading } from '../../components/Loading/Loading'
 import { ContainerMain } from '../../components/SharedLayout/SharedLayout.styled'
 import { Error } from '../../components/Error/Error'
 import { getFilteredCars } from '../../components/helpers/getFilteredCars'
+import { Section } from '../../components/Section/Section.styled'
 
 const Catalog = () => {
 	const dispatch = useDispatch()
@@ -78,7 +79,7 @@ const Catalog = () => {
 		<ContainerMain>
 			{isLoading && !error && <Loading />}
 			<Filter />
-			<section>
+			<Section>
 				{filteredCars.length === 0 && onFilter ? (
 					<Error emptyFilter={true} />
 				) : (
@@ -88,7 +89,7 @@ const Catalog = () => {
 				{showBtnMore && (
 					<BtnMore onClick={handleLoadMoreClick}>Load more</BtnMore>
 				)}
-			</section>
+			</Section>
 		</ContainerMain>
 	)
 }

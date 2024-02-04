@@ -90,7 +90,7 @@ export const DropdownList = styled.ul`
 	::-webkit-scrollbar {
 		position: absolute;
 		right: 50px;
-		width: 8px; /* Ширина скрола */
+		width: 8px;
 	}
 
 	::-webkit-scrollbar-track {
@@ -99,14 +99,12 @@ export const DropdownList = styled.ul`
 	}
 
 	::-webkit-scrollbar-thumb {
-		background: ${({ theme: { colors } }) =>
-			colors.scroll}; /* Колір пальця скрола (перетягуючої частини) */
-		border-radius: 10px; /* Закруглені кути пальця скрола */
+		background: ${({ theme: { colors } }) => colors.scroll};
+		border-radius: 10px;
 	}
 
 	::-webkit-scrollbar-thumb:hover {
-		background: ${({ theme: { colors } }) =>
-			colors.accentLight}; /* Колір пальця скрола при наведенні */
+		background: ${({ theme: { colors } }) => colors.accentLight};
 	}
 `
 

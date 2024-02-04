@@ -1,6 +1,6 @@
-import styled from '@emotion/styled'
+// import styled from '@emotion/styled'
 import { AiOutlineClose } from 'react-icons/ai'
-import theme from '../../styles/theme'
+import styled from 'styled-components'
 
 export const Overlay = styled.div`
 	position: fixed;
@@ -20,7 +20,7 @@ export const Wrapper = styled.div`
 	width: 200px;
 	height: 100vh;
 	padding: 145px 20px 20px 20px;
-	background-color: ${theme.colors.accent};
+	background-color: ${({ theme: { colors } }) => colors.accentLight};
 	flex-direction: column;
 	justify-content: space-between;
 	@media (min-width: 768px) {
@@ -30,7 +30,7 @@ export const Wrapper = styled.div`
 `
 
 export const IconClose = styled(AiOutlineClose)`
-	color: ${theme.colors.white};
+	color: ${({ theme: { colors } }) => colors.white};
 	width: 20px;
 	height: 20px;
 	@media (min-width: 768px) {

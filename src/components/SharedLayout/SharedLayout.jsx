@@ -7,8 +7,7 @@ import { Outlet } from 'react-router-dom'
 
 export const SharedLayout = () => {
 	const { error } = useCars()
-	// const { pathname: currentPath } = useLocation()
-
+	
 	return (
 		<>
 			<Header />
