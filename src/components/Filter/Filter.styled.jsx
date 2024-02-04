@@ -55,10 +55,7 @@ export const Select = styled.div`
 `
 
 export const SelectPrice = styled(Select)`
-	width: 100px;
-	@media screen and (min-width: 760px) {
-		width: 224px;
-	}
+	width: 130px;
 `
 
 export const DropDown = styled.div`
@@ -90,8 +87,6 @@ export const DropdownList = styled.ul`
 		position: absolute;
 		right: 50px;
 		width: 8px;
-		width: 1px;
-		background: transparent;
 	}
 
 	::-webkit-scrollbar-track {
@@ -108,8 +103,6 @@ export const DropdownList = styled.ul`
 		background: ${({ theme: { colors } }) => colors.accentLight};
 	}
 `
-
-export const DropdownListPrice = styled(DropdownList)``
 
 export const DropdownItem = styled.li`
 	color: ${({ theme: { colors } }) => colors.secondaryTextLight};

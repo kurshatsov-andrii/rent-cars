@@ -1,4 +1,3 @@
-// import styled from '@emotion/styled'
 import { AiOutlineClose } from 'react-icons/ai'
 import styled from 'styled-components'
 
@@ -43,6 +42,8 @@ export const ButtonClose = styled.button`
 	position: absolute;
 	top: 20px;
 	right: 20px;
+	background-color: transparent;
+	border: 0;
 	@media (min-width: 768px) {
 		top: 26px;
 		right: 32px;
