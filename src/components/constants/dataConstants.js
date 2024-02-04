@@ -23,4 +23,4 @@ export const modelData = [
 	'Land',
 ]
 
-export const priceData = [20, 30, 40, 50, 60, 70, 80]
+export const priceData = [10, 20, 30, 40, 50, 60, 70, 80]

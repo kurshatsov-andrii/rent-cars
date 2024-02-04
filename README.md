@@ -36,11 +36,11 @@ The application consists of three main pages:
 
 ## Technical Requirements
 
-- The application is built with React.
+- The application is built with Vite + React.
 - Routing is implemented using React Router.
 - Car advertisement data is retrieved from a dedicated server created on MockAPI.
 - The appearance and style of the interface are designed according to your preferences.
-- Pagination is implemented on the Catalog page, with 8 advertisements per page.
+- Pagination is implemented on the Catalog page, with 12 advertisements per page.
 - User actions are preserved even after page refresh.
 
 ## Additional Features

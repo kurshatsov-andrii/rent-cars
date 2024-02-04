@@ -11,8 +11,8 @@ export const getFilteredCars = (
 			isMatch = car.make === brandFilter
 		}
 		if (priceFilter) {
-			const match = priceFilter
-			const matchRentalPrices = car.rentalPrice
+			const match = priceFilter.match(/\$(\d+)/)
+			const matchRentalPrices = car.rentalPrice.match(/\$(\d+)/)
 			const matchPrice = match[1]
 			const matchRentalPrice = matchRentalPrices[1]
 			const selectedPrice = Number(matchPrice)
