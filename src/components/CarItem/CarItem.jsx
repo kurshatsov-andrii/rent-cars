@@ -22,8 +22,8 @@ import {
 	TitleWrap,
 } from './CarItem.styled'
 
-import icon from '../../assets/heart.svg'
-import iconFill from '../../assets/heartFill.svg'
+// import icon from '../../images/heart.svg'
+// import iconFill from '../../images/heartFill.svg'
 import { useCars } from '../../hooks/useCars'
 import { useDispatch } from 'react-redux'
 import {
@@ -90,11 +90,13 @@ export const CarItem = ({ dataCar }) => {
 					>
 						{favorite.some(car => car.id === dataCar.id) ? (
 							<svg>
-								<use href={iconFill + '#heart-fill'}></use>
+								<use
+									href={'/rent-cars/src/images/heartFill.svg#heart-fill'}
+								></use>
 							</svg>
 						) : (
 							<svg>
-								<use href={icon + '#heart'}></use>
+								<use href={'/rent-cars/src/images/heart.svg#heart'}></use>
 							</svg>
 						)}
 					</FavoriteBtn>
