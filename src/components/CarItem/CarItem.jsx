@@ -22,8 +22,8 @@ import {
 	TitleWrap,
 } from './CarItem.styled'
 
-import icon from '../../images/heart.svg'
-import iconFill from '../../images/heartFill.svg'
+import icon from '../../assets/heart.svg'
+import iconFill from '../../assets/heartFill.svg'
 import { useCars } from '../../hooks/useCars'
 import { useDispatch } from 'react-redux'
 import {
