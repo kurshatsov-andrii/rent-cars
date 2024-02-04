@@ -166,23 +166,23 @@ export const ModalScrollWrap = styled.div`
 	padding-right: 15px;
 	overflow-y: scroll;
 	::-webkit-scrollbar {
-		width: 5px; /* Ширина скрола */
+		width: 5px; 
 	}
 
 	::-webkit-scrollbar-track {
 		background: ${({ theme: { colors } }) => colors.secondaryTextLight};
-		border-radius: 15px; /* Фон треку скрола */
+		border-radius: 15px; 
 	}
 
 	::-webkit-scrollbar-thumb {
 		background: ${({ theme: { colors } }) =>
-			colors.accentLight}; /* Колір пальця скрола (перетягуючої частини) */
-		border-radius: 15px; /* Закруглені кути пальця скрола */
+			colors.accentLight}; 
+		border-radius: 15px; 
 	}
 
 	::-webkit-scrollbar-thumb:hover {
 		background: ${({ theme: { colors } }) =>
-			colors.accentDark}; /* Колір пальця скрола при наведенні */
+			colors.accentDark}; 
 	}
 `
 

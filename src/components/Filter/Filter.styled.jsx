@@ -62,17 +62,16 @@ export const SelectPrice = styled(Select)`
 `
 
 export const DropDown = styled.div`
-position: absolute;
-top: 52px;
-left: 0;
-z-index: 10;
-width: 224px;
-height: 272px;
-background-color: white;
-border-radius: 14px;
-border: 1px solid rgba(18, 20, 23, 0.05);
-padding: 14px 8px 14px 18px;
-}
+	position: absolute;
+	top: 52px;
+	left: 0;
+	z-index: 10;
+	width: 224px;
+	height: 272px;
+	background-color: white;
+	border-radius: 14px;
+	border: 1px solid rgba(18, 20, 23, 0.05);
+	padding: 14px 8px 14px 18px;
 `
 
 export const DropDownPrice = styled(DropDown)`
@@ -91,11 +90,13 @@ export const DropdownList = styled.ul`
 		position: absolute;
 		right: 50px;
 		width: 8px;
+		width: 1px;
+		background: transparent;
 	}
 
 	::-webkit-scrollbar-track {
 		background: ${({ theme: { colors } }) => colors.white};
-		border-radius: 10px; /* Фон треку скрола */
+		border-radius: 10px;
 	}
 
 	::-webkit-scrollbar-thumb {
