@@ -48,10 +48,24 @@ export const FavoriteBtn = styled.button`
 `
 
 export const Image = styled.img`
+	width: 261px;
+	height: 248px;
 	margin-bottom: 14px;
 	object-fit: cover;
 	object-position: center;
 	border-radius: 14px;
+	@media screen and (min-width: 480px) {
+		width: 461px;
+		height: 248px;
+	}
+`
+
+export const ImageCatalog = styled.img`
+	margin-bottom: 14px;
+	object-fit: cover;
+	object-position: center;
+	border-radius: 14px;	
+	}
 `
 
 export const TitleWrap = styled.div`
@@ -161,36 +175,36 @@ export const Accent = styled.span`
 `
 
 export const ModalScrollWrap = styled.div`
-	max-width: 446px;
-	height: 200px;
+	max-width: 461px;
+	height: 320px;
 	padding-right: 15px;
 	overflow-y: scroll;
 	::-webkit-scrollbar {
-		width: 5px; 
+		width: 5px;
 	}
 
 	::-webkit-scrollbar-track {
 		background: ${({ theme: { colors } }) => colors.secondaryTextLight};
-		border-radius: 15px; 
+		border-radius: 15px;
 	}
 
 	::-webkit-scrollbar-thumb {
-		background: ${({ theme: { colors } }) =>
-			colors.accentLight}; 
-		border-radius: 15px; 
+		background: ${({ theme: { colors } }) => colors.accentLight};
+		border-radius: 15px;
 	}
 
 	::-webkit-scrollbar-thumb:hover {
-		background: ${({ theme: { colors } }) =>
-			colors.accentDark}; 
+		background: ${({ theme: { colors } }) => colors.accentDark};
+	}
+
+	@media screen and (max-width: 480px) {
+		height: 370px;
 	}
 `
 
 export const RentalPhone = styled.a`
 	display: flex;
 	margin-top: 24px;
-	margin-left: auto;
-	margin-right: auto;
 	width: 140px;
 	height: 35px;
 	justify-content: center;

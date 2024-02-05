@@ -14,8 +14,8 @@ export const Backdrop = styled.div`
 `
 
 export const ModalContent = styled.div`
-	min-width: 280px;
-	max-height: 752px;
+	width: 280px;
+	height: 752px;
 	padding: 10px;
 	position: absolute;
 	top: 50%;
@@ -24,9 +24,9 @@ export const ModalContent = styled.div`
 	font-size: 12px;
 	background-color: ${({ theme: { colors } }) => colors.white};
 	border-radius: 24px;
-	@media screen and (min-width: 760px) {
-		max-width: 541px;
-		max-height: 752px;
+	@media screen and (min-width: 480px) {
+		width: 541px;
+		height: 752px;
 		padding: 40px;
 		font-size: 14px;
 	}

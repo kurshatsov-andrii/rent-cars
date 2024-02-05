@@ -6,6 +6,7 @@ import {
 	Description,
 	FavoriteBtn,
 	Image,
+	ImageCatalog,
 	InfoItem,
 	InfoList,
 	InfoListModal,
@@ -98,7 +99,12 @@ export const CarItem = ({ dataCar }) => {
 							</svg>
 						)}
 					</FavoriteBtn>
-					<Image src={img} alt={`${make} ${model}`} width='274' height='268' />
+					<ImageCatalog
+						src={img}
+						alt={`${make} ${model}`}
+						width='274'
+						height='268'
+					/>
 
 					<div style={{ padding: '0 5px' }}>
 						<TitleWrap>
@@ -131,7 +137,7 @@ export const CarItem = ({ dataCar }) => {
 			</ListItem>
 			{showModal && (
 				<Modal onClose={closeModal}>
-					<Image src={img} alt={`${make} ${model}`} width='461' height='248' />
+					<Image src={img} alt={`${make} ${model}`} />
 					<TitleWrap>
 						<NameCarModal>
 							{make}
@@ -178,7 +184,7 @@ export const CarItem = ({ dataCar }) => {
 							</ConditionsItem>
 						</ConditionsList>
 					</ModalScrollWrap>
-					<RentalPhone href='tel:+380730000000'>Rent cars</RentalPhone>
+					<RentalPhone href='tel:+380730000000'>Rental car</RentalPhone>
 				</Modal>
 			)}
 		</>
